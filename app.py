@@ -22,6 +22,8 @@ import pandas as pd
 # from extract_text_and_table import parse_pdf
 import time
 
+# Backend code
+
 load_dotenv()
 
 def get_pdf_text(pdf_docs):
