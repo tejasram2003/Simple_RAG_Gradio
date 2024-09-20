@@ -143,8 +143,8 @@ def gradio_app():
             if conversation_chain is None:
                 return "Please upload a PDF and start the chat first.", "", ""
             
-            response, time_taken, tokens_per_sec = chat_with_pdf(user_question, conversation_chain)
-            return response, time_taken, tokens_per_sec
+            response = chat_with_pdf(user_question, conversation_chain)
+            return response
 
         start_chat_button.click(start_chat, inputs=[pdf_input], outputs=[ai_response])
         submit_button.click(handle_question, inputs=[user_question_input], outputs=[ai_response])
